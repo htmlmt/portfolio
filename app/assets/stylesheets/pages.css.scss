@@ -11,8 +11,38 @@ body {
   color: #fff;
 }
 
+#stop {
+  cursor: pointer;
+  position: absolute;
+  width: 62px;
+  height: 30px;
+  background: #3A3A3A;
+  text-align: center;
+  top: 530px;
+  left: 608px;
+}
+
+#stop:active {
+  position: absolute;
+  top: 536px;
+}
+
 .track_one, .track_two, .track_three, .track_four, .track_five, .track_six, .track_seven {
   cursor: pointer;
+}
+
+#arm {
+  width: 764px;
+  position: fixed;
+  left: 764px;
+  top: -174px;
+}
+
+#record_label {
+  width: 122px;
+  position: fixed;
+  left: 807px;
+  top: 300px;
 }
 
 #svg {
@@ -20,9 +50,10 @@ body {
   height: 100%;
   position: absolute;
   top: 0px;
+  overflow: hidden;
 }
 
-@-webkit-keyframes rotate {
+@-webkit-keyframes record_spin {
   from {
     -webkit-transform: rotate(0deg);
   }
@@ -31,10 +62,11 @@ body {
   }
 }
 
-.spin
+.record_spin
 {
-    -webkit-animation-name:             rotate; 
+    -webkit-animation-name:             record_spin; 
     -webkit-animation-duration:         4s; 
     -webkit-animation-iteration-count:  infinite;
     -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
 }
