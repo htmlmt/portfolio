@@ -1,0 +1,40 @@
+body {
+  margin: 0px;
+  background: #353535;
+}
+
+.label_playing {
+  display: none;
+}
+
+.selected {
+  color: #fff;
+}
+
+.track_one, .track_two, .track_three, .track_four, .track_five, .track_six, .track_seven {
+  cursor: pointer;
+}
+
+#svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to { 
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.spin
+{
+    -webkit-animation-name:             rotate; 
+    -webkit-animation-duration:         4s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function: linear;
+}
