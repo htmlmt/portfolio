@@ -9,47 +9,38 @@ $(document).ready(function(){
   var needleDrop = $("#needle_drop")[0];
   $(trackOne).on('ended', function() {
      playing = false;
-     setTimeout(function(){
-       $(".track_one_record").css("stroke", "#3A3A3A")}, 1000);
-     setTimeout(function(){
-       $(".track_one_text").css("fill", "#00B69F")}, 1000);
-     $("#arm").addClass("one_to_two");
-     setTimeout(function(){
-       $(".track_two").click()}, 1000);
+     $(".track_one_record").css("stroke", "#3A3A3A");
+     $(".track_one_text").css("fill", "#00B69F");
+     $(".track_two").click();
   });
   $(trackTwo).on('ended', function() {
      playing = false;
      $(".track_two_record").css("stroke", "#3A3A3A");
      $(".track_two_text").css("fill", "#00B69F");
-     $("#arm").addClass("next_track");
      $(".track_three").click();
   });
   $(trackThree).on('ended', function() {
      playing = false;
      $(".track_three_record").css("stroke", "#3A3A3A");
      $(".track_three_text").css("fill", "#00B69F");
-     $("#arm").addClass("next_track");
      $(".track_four").click();
   });
   $(trackFour).on('ended', function() {
      playing = false;
      $(".track_four_record").css("stroke", "#3A3A3A");
      $(".track_four_text").css("fill", "#00B69F");
-     $("#arm").addClass("next_track");
      $(".track_five").click();
   });
   $(trackFive).on('ended', function() {
      playing = false;
      $(".track_five_record").css("stroke", "#3A3A3A");
      $(".track_five_text").css("fill", "#00B69F");
-     $("#arm").addClass("next_track");
      $(".track_six").click();
   });
   $(trackSix).on('ended', function() {
      playing = false;
      $(".track_six_record").css("stroke", "#3A3A3A");
      $(".track_six_text").css("fill", "#00B69F");
-     $("#arm").addClass("next_track");
      $(".track_seven").click();
   });
   $(trackSeven).on('ended', function() {
@@ -122,10 +113,10 @@ $(document).ready(function(){
     $(".track").css("opacity", 1.0);
     $(".track_text").css("fill", "#00B69F");
     $(".track_record").css("stroke", "#3A3A3A");
-    trackTwo.pause();
-    trackTwo.currentTime = 0
     trackOne.pause();
     trackOne.currentTime = 0
+    trackTwo.pause();
+    trackTwo.currentTime = 0
     trackFour.pause();
     trackFour.currentTime = 0
     trackFive.pause();
