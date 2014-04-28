@@ -7,6 +7,7 @@ gem 'rails', '3.2.17'
 
 gem 'pg'
 
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # Gems used only for assets and not required
 # in production environments by default.
