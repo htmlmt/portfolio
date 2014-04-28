@@ -7,6 +7,8 @@ $(document).ready(function(){
   var trackSix = $("#track_six_audio")[0];
   var trackSeven = $("#track_seven_audio")[0];
   var needleDrop = $("#needle_drop")[0];
+  var coffee = $("#coffee")[0];
+  
   $(trackOne).on('ended', function() {
      playing = false;
      $(".track_one_record").css("stroke", "#3A3A3A");
@@ -48,6 +50,16 @@ $(document).ready(function(){
      $(".track_seven_record").css("stroke", "#3A3A3A");
      $(".track_seven_text").css("fill", "#00B69F");
      $("#stop").click();
+  });
+  
+  $(".coffee").on("click", function(){
+    if ( $(".coffee").hasClass("empty_cup") ) {
+      
+    } else {
+      coffee.play();
+    }
+    setTimeout(function(){
+      $(".coffee").css("fill", "#CCCCCC")}, 2000);
   });
   
   $(".track_one").on("click", function(){

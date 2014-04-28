@@ -11,6 +11,10 @@ body {
   color: #fff;
 }
 
+.coffee {
+  cursor: pointer;
+}
+
 #stop {
   cursor: pointer;
   position: absolute;
@@ -65,7 +69,7 @@ body {
 .record_spin
 {
     -webkit-animation-name:             record_spin; 
-    -webkit-animation-duration:         4s; 
+    -webkit-animation-duration:         3s; 
     -webkit-animation-iteration-count:  infinite;
     -webkit-animation-timing-function: linear;
     -webkit-animation-fill-mode: forwards;
