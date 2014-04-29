@@ -97,17 +97,29 @@ $(document).ready(function(){
     $(".track_text").css("fill", "#00B69F");
     $(".track_record").css("stroke", "#3A3A3A");
     trackTwo.pause();
-    trackTwo.currentTime = 0
     trackThree.pause();
-    trackThree.currentTime = 0
     trackFour.pause();
-    trackFour.currentTime = 0
     trackFive.pause();
-    trackFive.currentTime = 0
     trackSix.pause();
-    trackSix.currentTime = 0
     trackSeven.pause();
-    trackSeven.currentTime = 0
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
     setTimeout(function(){
       trackOne.play()}, 1500);
     $(".track_one_record").css("stroke", "#666");
@@ -125,17 +137,29 @@ $(document).ready(function(){
     $(".track_text").css("fill", "#00B69F");
     $(".track_record").css("stroke", "#3A3A3A");
     trackOne.pause();
-    trackOne.currentTime = 0
     trackThree.pause();
-    trackThree.currentTime = 0
     trackFour.pause();
-    trackFour.currentTime = 0
     trackFive.pause();
-    trackFive.currentTime = 0
     trackSix.pause();
-    trackSix.currentTime = 0
     trackSeven.pause();
-    trackSeven.currentTime = 0
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
     setTimeout(function(){
       trackTwo.play()}, 1500);
     $(".track_two_record").css("stroke", "#666");
@@ -153,17 +177,29 @@ $(document).ready(function(){
     $(".track_text").css("fill", "#00B69F");
     $(".track_record").css("stroke", "#3A3A3A");
     trackOne.pause();
-    trackOne.currentTime = 0
     trackTwo.pause();
-    trackTwo.currentTime = 0
     trackFour.pause();
-    trackFour.currentTime = 0
     trackFive.pause();
-    trackFive.currentTime = 0
     trackSix.pause();
-    trackSix.currentTime = 0
     trackSeven.pause();
-    trackSeven.currentTime = 0
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
     setTimeout(function(){
       trackThree.play()}, 1500);
     $(".track_three_record").css("stroke", "#666");
@@ -181,17 +217,29 @@ $(document).ready(function(){
     $(".track_text").css("fill", "#00B69F");
     $(".track_record").css("stroke", "#3A3A3A");
     trackOne.pause();
-    trackOne.currentTime = 0
     trackTwo.pause();
-    trackTwo.currentTime = 0
     trackThree.pause();
-    trackThree.currentTime = 0
     trackFive.pause();
-    trackFive.currentTime = 0
     trackSix.pause();
-    trackSix.currentTime = 0
     trackSeven.pause();
-    trackSeven.currentTime = 0
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
     setTimeout(function(){
       trackFour.play()}, 1500);
     $(".track_four_record").css("stroke", "#666");
@@ -209,17 +257,29 @@ $(document).ready(function(){
     $(".track_text").css("fill", "#00B69F");
     $(".track_record").css("stroke", "#3A3A3A");
     trackOne.pause();
-    trackOne.currentTime = 0
     trackTwo.pause();
-    trackTwo.currentTime = 0
     trackThree.pause();
-    trackThree.currentTime = 0
     trackFour.pause();
-    trackFour.currentTime = 0
     trackSix.pause();
-    trackSix.currentTime = 0
     trackSeven.pause();
-    trackSeven.currentTime = 0
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
     setTimeout(function(){
       trackFive.play()}, 1500);
     $(".track_five_record").css("stroke", "#666");
@@ -236,18 +296,30 @@ $(document).ready(function(){
     $(".track").css("opacity", 1.0);
     $(".track_text").css("fill", "#00B69F");
     $(".track_record").css("stroke", "#3A3A3A");
-    trackTwo.pause();
-    trackTwo.currentTime = 0
-    trackThree.pause();
-    trackThree.currentTime = 0
-    trackFour.pause();
-    trackFour.currentTime = 0
-    trackFive.pause();
-    trackFive.currentTime = 0
     trackOne.pause();
-    trackOne.currentTime = 0
+    trackTwo.pause();
+    trackThree.pause();
+    trackFive.pause();
+    trackFour.pause();
     trackSeven.pause();
-    trackSeven.currentTime = 0
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
     setTimeout(function(){
       trackSix.play()}, 1500);
     $(".track_six_record").css("stroke", "#666");
@@ -264,18 +336,30 @@ $(document).ready(function(){
     $(".track").css("opacity", 1.0);
     $(".track_text").css("fill", "#00B69F");
     $(".track_record").css("stroke", "#3A3A3A");
-    trackTwo.pause();
-    trackTwo.currentTime = 0
-    trackThree.pause();
-    trackThree.currentTime = 0
-    trackFour.pause();
-    trackFour.currentTime = 0
-    trackFive.pause();
-    trackFive.currentTime = 0
-    trackSix.pause();
-    trackSix.currentTime = 0
     trackOne.pause();
-    trackOne.currentTime = 0
+    trackTwo.pause();
+    trackThree.pause();
+    trackFive.pause();
+    trackSix.pause();
+    trackFour.pause();
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
     setTimeout(function(){
       trackSeven.play()}, 1500);
     $(".track_seven_record").css("stroke", "#666");
@@ -309,6 +393,9 @@ $(document).ready(function(){
     $("#main_target").css("transition-property", "all");
     $("#main_target").css("transition-duration", "1s");
     $('#main_target').css("-webkit-transform", "rotate(0deg)");
+    if ( css_angle >= 24 && css_angle < 50 ) {
+      needleUp.play()
+    }
   });
   
   $("#needle").mousedown(function(){
