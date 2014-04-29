@@ -107,7 +107,7 @@ $(document).ready(function(){
     trackSeven.pause();
     trackSeven.currentTime = 0
     setTimeout(function(){
-      trackOne.play()}, 500);
+      trackOne.play()}, 1500);
     $(".track_one_record").css("stroke", "#666");
     $(".track_one_text").css("fill", "#ad3d32");
     $("#main_target").css("transition-property", "all");
@@ -135,7 +135,7 @@ $(document).ready(function(){
     trackSeven.pause();
     trackSeven.currentTime = 0
     setTimeout(function(){
-      trackTwo.play()}, 500);
+      trackTwo.play()}, 1500);
     $(".track_two_record").css("stroke", "#666");
     $(".track_two_text").css("fill", "#ad3d32");
     $("#main_target").css("transition-property", "all");
@@ -163,7 +163,7 @@ $(document).ready(function(){
     trackSeven.pause();
     trackSeven.currentTime = 0
     setTimeout(function(){
-      trackThree.play()}, 500);
+      trackThree.play()}, 1500);
     $(".track_three_record").css("stroke", "#666");
     $(".track_three_text").css("fill", "#ad3d32");
     $("#main_target").css("transition-property", "all");
@@ -191,7 +191,7 @@ $(document).ready(function(){
     trackSeven.pause();
     trackSeven.currentTime = 0
     setTimeout(function(){
-      trackFour.play()}, 500);
+      trackFour.play()}, 1500);
     $(".track_four_record").css("stroke", "#666");
     $(".track_four_text").css("fill", "#ad3d32");
     $("#main_target").css("transition-property", "all");
@@ -219,7 +219,7 @@ $(document).ready(function(){
     trackSeven.pause();
     trackSeven.currentTime = 0
     setTimeout(function(){
-      trackFive.play()}, 500);
+      trackFive.play()}, 1500);
     $(".track_five_record").css("stroke", "#666");
     $(".track_five_text").css("fill", "#ad3d32");
     $("#main_target").css("transition-property", "all");
@@ -247,7 +247,7 @@ $(document).ready(function(){
     trackSeven.pause();
     trackSeven.currentTime = 0
     setTimeout(function(){
-      trackSix.play()}, 500);
+      trackSix.play()}, 1500);
     $(".track_six_record").css("stroke", "#666");
     $(".track_six_text").css("fill", "#ad3d32");
     $("#main_target").css("transition-property", "all");
@@ -275,7 +275,7 @@ $(document).ready(function(){
     trackOne.pause();
     trackOne.currentTime = 0
     setTimeout(function(){
-      trackSeven.play()}, 500);
+      trackSeven.play()}, 1500);
     $(".track_seven_record").css("stroke", "#666");
     $(".track_seven_text").css("fill", "#ad3d32");
     $("#main_target").css("transition-property", "all");
@@ -308,7 +308,7 @@ $(document).ready(function(){
     $('#main_target').css("-webkit-transform", "rotate(0deg)");
   });
   
-  $(document).mousedown(function(){
+  $("#needle").mousedown(function(){
     $("#main_target").css("transition-property", "all");
     $("#main_target").css("transition-duration", "0s");
   });
@@ -373,6 +373,11 @@ $(document).ready(function(){
       $("#main_target").css("transition-duration", "1s");
       $('#main_target').css("-webkit-transform", "rotate(46deg)");
       $('.track_seven').click();
+    }
+    if ( css_angle >= 24 && css_angle < 50 ) {
+      needleDrop.pause()
+      needleDrop.currentTime = 0
+      needleDrop.play()
     }
   });
   
