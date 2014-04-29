@@ -35,6 +35,8 @@ $(document).ready(function(){
   var trackSeven = $("#track_seven_audio")[0];
   var needleDrop = $("#needle_drop")[0];
   var coffee = $("#coffee")[0];
+  var needleUp = $("#needle_up")[0]
+  var needleBack = $("#needle_back")[0]
   
   $(trackOne).on('ended', function() {
      playing = false;
@@ -284,6 +286,7 @@ $(document).ready(function(){
   });
   
   $('#stop').click(function(){
+    var css_angle = getAngle()
     $(".record_spin").one('animationiteration webkitAnimationIteration', function() {
       $("#record_label").removeClass("record_spin");
     });
@@ -309,8 +312,30 @@ $(document).ready(function(){
   });
   
   $("#needle").mousedown(function(){
+    var css_angle = getAngle()
+    trackOne.pause();
+    trackOne.currentTime = 0
+    trackTwo.pause();
+    trackTwo.currentTime = 0
+    trackThree.pause();
+    trackThree.currentTime = 0
+    trackFour.pause();
+    trackFour.currentTime = 0
+    trackFive.pause();
+    trackFive.currentTime = 0
+    trackSix.pause();
+    trackSix.currentTime = 0
+    trackSeven.pause();
+    trackSeven.currentTime = 0
+    needleDrop.pause()
+    needleDrop.currentTime = 0
+    needleUp.pause()
+    needleUp.currentTime = 0
     $("#main_target").css("transition-property", "all");
     $("#main_target").css("transition-duration", "0s");
+    if ( css_angle >= 24 && css_angle < 50 ) {
+      needleUp.play()
+    }
   });
   
   $("#needle").mouseup(function(){
@@ -319,20 +344,6 @@ $(document).ready(function(){
       $(".record_spin").one('animationiteration webkitAnimationIteration', function() {
         $("#record_label").removeClass("record_spin");
       });
-      trackOne.pause();
-      trackOne.currentTime = 0
-      trackTwo.pause();
-      trackTwo.currentTime = 0
-      trackThree.pause();
-      trackThree.currentTime = 0
-      trackFour.pause();
-      trackFour.currentTime = 0
-      trackFive.pause();
-      trackFive.currentTime = 0
-      trackSix.pause();
-      trackSix.currentTime = 0
-      trackSeven.pause();
-      trackSeven.currentTime = 0
       $(".track_text").css("fill", "#00B69F");
       $(".track_record").css("stroke", "#3A3A3A");
       $("#main_target").css("transition-property", "all");
