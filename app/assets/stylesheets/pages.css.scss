@@ -35,16 +35,37 @@ body {
   cursor: pointer;
 }
 
-#arm {
+.arm {
   width: 764px;
-  position: fixed;
-  left: 764px;
-  top: -174px;
+  height: 764px;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg); 
+  -ms-transform: rotate(0deg); 
+  -o-transform: rotate(0deg);  
+}
+
+#main_target {
+  position: relative;
+  top: -165px;
+  left: 770px;
+  width: 764px;
+  height: 764px;
+}
+
+#needle {
+  cursor: pointer;
+  width: 29px;
+  height: 71px;
+  z-index: 1;
+  position: absolute;
+  top: 651px;
+  left: 368px; 
 }
 
 #record_label {
   width: 122px;
-  position: fixed;
+  position: absolute;
   left: 807px;
   top: 300px;
 }
@@ -69,7 +90,7 @@ body {
 .record_spin
 {
     -webkit-animation-name:             record_spin; 
-    -webkit-animation-duration:         3s; 
+    -webkit-animation-duration:         2.7s; 
     -webkit-animation-iteration-count:  infinite;
     -webkit-animation-timing-function: linear;
     -webkit-animation-fill-mode: forwards;
