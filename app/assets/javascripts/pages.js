@@ -401,23 +401,33 @@ $(document).ready(function(){
   $("#needle").mousedown(function(){
     var css_angle = getAngle()
     trackOne.pause();
-    trackOne.currentTime = 0
     trackTwo.pause();
-    trackTwo.currentTime = 0
     trackThree.pause();
-    trackThree.currentTime = 0
-    trackFour.pause();
-    trackFour.currentTime = 0
     trackFive.pause();
-    trackFive.currentTime = 0
     trackSix.pause();
-    trackSix.currentTime = 0
+    trackFour.pause();
     trackSeven.pause();
-    trackSeven.currentTime = 0
-    needleDrop.pause()
-    needleDrop.currentTime = 0
-    needleUp.pause()
-    needleUp.currentTime = 0
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
     $("#main_target").css("transition-property", "all");
     $("#main_target").css("transition-duration", "0s");
     if ( css_angle >= 24 && css_angle < 50 ) {
