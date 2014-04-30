@@ -39,9 +39,8 @@ $(document).ready(function(){
   var needleBack = $("#needle_back")[0]
   var coffeePour = $("#coffee_pour")[0]
   
-  if ( $("#record_label").hasClass("record_spin") === false ) {
-    $("#record_label").addClass("record_spin");
-  }
+  setTimeout(function(){
+    $("#record_label").addClass("record_spin")}, 2500);
   
   coffeePour.play();
   
