@@ -37,6 +37,34 @@ $(document).ready(function(){
   var coffee = $("#coffee")[0];
   var needleUp = $("#needle_up")[0]
   var needleBack = $("#needle_back")[0]
+  var coffeePour = $("#coffee_pour")[0]
+  
+  if ( $("#record_label").hasClass("record_spin") === false ) {
+    $("#record_label").addClass("record_spin");
+  }
+  
+  coffeePour.play();
+  
+  $("#coffee_cup").css("fill", "#CCCCCC");
+  setTimeout(function(){
+    $("#coffee_cup").css("fill", "#ddb687")}, 1000);
+  setTimeout(function(){
+    $("#coffee_cup").css("fill", "#af8145")}, 1500);
+  setTimeout(function(){
+    $("#coffee_cup").css("fill", "#967038")}, 2500);
+  setTimeout(function(){
+    $("#coffee_cup").css("fill", "#7c5d2c")}, 3500);
+  
+  $("#message").hide();
+  setTimeout(function(){
+  $("#message").fadeIn("slow")}, 500);  
+  setTimeout(function(){
+    $("#message").fadeOut("slow", 0.0)}, 5000);
+    
+  $("#main_target").css("transition-property", "all");
+  $("#main_target").css("transition-duration", "1s");
+  setTimeout(function(){
+  $('#main_target').css("-webkit-transform", "rotate(10deg)")}, 2500);
   
   $(trackOne).on('ended', function() {
      playing = false;
@@ -83,6 +111,14 @@ $(document).ready(function(){
   
   $(".coffee").on("click", function(){
     coffee.play();
+    setTimeout(function(){
+      $("#coffee_cup").css("fill", "#7c5d2c")}, 500);
+    setTimeout(function(){
+      $("#coffee_cup").css("fill", "#967038")}, 1000);
+    setTimeout(function(){
+      $("#coffee_cup").css("fill", "#af8145")}, 1500);
+    setTimeout(function(){
+      $("#coffee_cup").css("fill", "#ddb687")}, 1750);
     setTimeout(function(){
       $(".coffee").css("fill", "#CCCCCC")}, 2000);
     $('.coffee').off();
@@ -137,6 +173,7 @@ $(document).ready(function(){
     $(".track_text").css("fill", "#00B69F");
     $(".track_record").css("stroke", "#3A3A3A");
     trackOne.pause();
+    trackTwo.pause();
     trackThree.pause();
     trackFour.pause();
     trackFive.pause();
@@ -144,6 +181,9 @@ $(document).ready(function(){
     trackSeven.pause();
     if ( trackOne.currentTime ) {
        trackOne.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
     }
     if ( trackThree.currentTime ) {
        trackThree.currentTime = 0
@@ -437,7 +477,7 @@ $(document).ready(function(){
   
   $("#needle").mouseup(function(){
     var css_angle = getAngle()
-    if ( css_angle > 0 && css_angle < 24 || css_angle > 50 ) {
+    if ( css_angle > 0 && css_angle < 24 || css_angle > 50 || css_angle < 0 ) {
       $(".record_spin").one('animationiteration webkitAnimationIteration', function() {
         $("#record_label").removeClass("record_spin");
       });
