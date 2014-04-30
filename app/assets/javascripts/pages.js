@@ -414,19 +414,33 @@ $(document).ready(function(){
       $("#record_label").removeClass("record_spin");
     });
     trackOne.pause();
-    trackOne.currentTime = 0
     trackTwo.pause();
-    trackTwo.currentTime = 0
     trackThree.pause();
-    trackThree.currentTime = 0
     trackFour.pause();
-    trackFour.currentTime = 0
     trackFive.pause();
-    trackFive.currentTime = 0
     trackSix.pause();
-    trackSix.currentTime = 0
     trackSeven.pause();
-    trackSeven.currentTime = 0
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
     $(".track_text").css("fill", "#00B69F");
     $(".track_record").css("stroke", "#3A3A3A");
     $("#main_target").css("transition-property", "all");
