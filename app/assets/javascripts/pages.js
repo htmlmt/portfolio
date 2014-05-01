@@ -63,20 +63,28 @@ $(document).ready(function(){
   $("#play").click(function(){
     if ( $(".track_one_list").hasClass("playing_now") ) {
       trackOne.play();
+      $(".track_one_list").css("color", "#ad3d32");
     } else if ( $(".track_two_list").hasClass("playing_now") ) {
       trackTwo.play();
+      $(".track_two_list").css("color", "#ad3d32");
     } else if ( $(".track_three_list").hasClass("playing_now") ) {
       trackThree.play();
+      $(".track_three_list").css("color", "#ad3d32");
     } else if ( $(".track_four_list").hasClass("playing_now") ) {
       trackFour.play();
+      $(".track_four_list").css("color", "#ad3d32");
     } else if ( $(".track_five_list").hasClass("playing_now") ) {
       trackFive.play();
+      $(".track_five_list").css("color", "#ad3d32");
     } else if ( $(".track_six_list").hasClass("playing_now") ) {
       trackSix.play();
+      $(".track_six_list").css("color", "#ad3d32");
     } else if ( $(".track_seven_list").hasClass("playing_now") ) {
       trackSeven.play();
+      $(".track_seven_list").css("color", "#ad3d32");
     }  else {
       trackOne.play();
+      $(".track_one_list").css("color", "#ad3d32");
     }
     $("#play").hide();
     $("#pause").show();
@@ -84,47 +92,60 @@ $(document).ready(function(){
   
   $("#next").on("click", function(){
     if ( $(".track_one_list").hasClass("playing_now") ) {
-      console.log("1")
       trackOne.pause();
       trackOne.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_two_list").addClass("playing_now");
+      $(".track_two_list").css("color", "#ad3d32");
       trackTwo.play();
     } else if ( $(".track_two_list").hasClass("playing_now") ) {
       trackTwo.pause();
       trackTwo.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_three_list").addClass("playing_now");
+      $(".track_three_list").css("color", "#ad3d32");
       trackThree.play();
     } else if ( $(".track_three_list").hasClass("playing_now") ) {
       trackThree.pause();
       trackThree.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_four_list").addClass("playing_now");
+      $(".track_four_list").css("color", "#ad3d32");
       trackFour.play();
     } else if ( $(".track_four_list").hasClass("playing_now") ) {
       trackFour.pause();
       trackFour.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_five_list").addClass("playing_now");
+      $(".track_five_list").css("color", "#ad3d32");
       trackFive.play();
     } else if ( $(".track_five_list").hasClass("playing_now") ) {
       trackFive.pause();
       trackFive.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_six_list").addClass("playing_now");
+      $(".track_six_list").css("color", "#ad3d32");
       trackSix.play();
     } else if ( $(".track_six_list").hasClass("playing_now") ) {
       trackSix.pause();
       trackSix.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_seven_list").addClass("playing_now");
+      $(".track_seven_list").css("color", "#ad3d32");
       trackSeven.play();
     } else if ( $(".track_seven_list").hasClass("playing_now") ) {
       trackSeven.pause();
       trackSeven.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_one_list").addClass("playing_now");
+      $(".track_one_list").css("color", "#ad3d32");
       trackOne.play();
     }  else {
       
@@ -138,43 +159,57 @@ $(document).ready(function(){
       trackOne.pause();
       trackOne.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_seven_list").addClass("playing_now");
+      $(".track_seven_list").css("color", "#ad3d32")
       trackSeven.play();
     } else if ( $(".track_two_list").hasClass("playing_now") ) {
       trackTwo.pause();
       trackTwo.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_one_list").addClass("playing_now");
+      $(".track_one_list").css("color", "#ad3d32")
       trackOne.play();
     } else if ( $(".track_three_list").hasClass("playing_now") ) {
       trackThree.pause();
       trackThree.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_two_list").addClass("playing_now");
+      $(".track_two_list").css("color", "#ad3d32")
       trackTwo.play();
     } else if ( $(".track_four_list").hasClass("playing_now") ) {
       trackFour.pause();
       trackFour.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_three_list").addClass("playing_now");
+      $(".track_three_list").css("color", "#ad3d32")
       trackThree.play();
     } else if ( $(".track_five_list").hasClass("playing_now") ) {
       trackFive.pause();
       trackFive.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_four_list").addClass("playing_now");
+      $(".track_four_list").css("color", "#ad3d32")
       trackFour.play();
     } else if ( $(".track_six_list").hasClass("playing_now") ) {
       trackSix.pause();
       trackSix.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_five_list").addClass("playing_now");
+      $(".track_five_list").css("color", "#ad3d32")
       trackFive.play();
     } else if ( $(".track_seven_list").hasClass("playing_now") ) {
       trackSeven.pause();
       trackSeven.currentTime = 0
       $(".track_list").removeClass("playing_now");
+      $(".track_list").css("color", "#00B69F");
       $(".track_six_list").addClass("playing_now");
+      $(".track_six_list").css("color", "#ad3d32")
       trackSix.play();
     }  else {
       
@@ -184,6 +219,7 @@ $(document).ready(function(){
   });
   
   $("#pause").on("click", function(){
+    $(".track_list").css("color", "#00B69F");
     trackFour.pause();
     trackTwo.pause();
     trackThree.pause();
@@ -196,7 +232,9 @@ $(document).ready(function(){
   });
   
   $(".track_one_list").on("click", function(){
+    $(".track_list").css("color", "#00B69F");
     $(".track_list").removeClass("playing_now");
+    $(".track_one_list").css("color", "#ad3d32");
     trackFour.pause();
     trackTwo.pause();
     trackThree.pause();
@@ -229,6 +267,8 @@ $(document).ready(function(){
   
   $(".track_two_list").on("click", function(){
     $(".track_list").removeClass("playing_now");
+    $(".track_list").css("color", "#00B69F");
+    $(".track_two_list").css("color", "#ad3d32");
     trackOne.pause();
     trackFour.pause();
     trackThree.pause();
@@ -260,6 +300,8 @@ $(document).ready(function(){
   })
   
   $(".track_three_list").on("click", function(){
+    $(".track_list").css("color", "#00B69F");
+    $(".track_three_list").css("color", "#ad3d32");
     $(".track_list").removeClass("playing_now");
     trackOne.pause();
     trackTwo.pause();
@@ -292,6 +334,8 @@ $(document).ready(function(){
   });
   
   $(".track_four_list").on("click", function(){
+    $(".track_list").css("color", "#00B69F");
+    $(".track_four_list").css("color", "#ad3d32");
     $(".track_list").removeClass("playing_now");
     trackOne.pause();
     trackTwo.pause();
@@ -324,6 +368,8 @@ $(document).ready(function(){
   });
   
   $(".track_five_list").on("click", function(){
+    $(".track_list").css("color", "#00B69F");
+    $(".track_five_list").css("color", "#ad3d32");
     $(".track_list").removeClass("playing_now");
     trackOne.pause();
     trackTwo.pause();
@@ -356,6 +402,8 @@ $(document).ready(function(){
   });
   
   $(".track_six_list").on("click", function(){
+    $(".track_list").css("color", "#00B69F");
+    $(".track_six_list").css("color", "#ad3d32");
     $(".track_list").removeClass("playing_now");
     trackOne.pause();
     trackTwo.pause();
@@ -388,6 +436,8 @@ $(document).ready(function(){
   });
   
   $(".track_seven_list").on("click", function(){
+    $(".track_list").css("color", "#00B69F");
+    $(".track_seven_list").css("color", "#ad3d32");
     $(".track_list").removeClass("playing_now");
     trackOne.pause();
     trackTwo.pause();
