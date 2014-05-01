@@ -3,6 +3,158 @@ body {
   background: #353535;
 }
 
+@media all and (max-width: 767px) {
+  
+  hr {
+    -webkit-margin-before: 0.1em;
+    -webkit-margin-after: 0.1em;
+  }
+  
+  h1 {
+    font-family: "museo-slab";
+    color: #00B69F;
+    text-align: center;
+    font-size: 8vw;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+  }
+  
+  h2 {
+    font-family: "museo-slab";
+    color: #00B69F;
+    font-size: 5vw;
+    margin-left: 2em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-before: 0em;
+  }
+  
+  h3 {
+    font-family: "adobe-caslon-pro";
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 100;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+  }
+  
+  h2 a {
+    color: #00B69F;
+    font-family: "adobe-caslon-pro";
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 100;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+  }
+  
+  .track_one_list, .track_two_list, .track_three_list, .track_four_list, .track_five_list, .track_six_list, .track_seven_list {
+    cursor: pointer;
+  }
+  
+  #container {
+    display: none;
+  }
+  
+  #mobile_album {
+    background: #FFF2E3;
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    padding-bottom: 10px;
+  }
+  
+  #mobile_message {
+    font-family: "adobe-caslon-pro";
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: -27px;
+  }
+  
+  #audio_buttons {
+    margin-top: 25px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #prev {
+    float: left;
+    margin-left: 12%;
+    margin-right: 12%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  #prev:active {
+    opacity: 0.5;
+  }
+  
+  #play {
+    float: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  #play:active {
+    opacity: 0.5;
+  }
+  
+  #next {
+    float: left;
+    margin-left: 12%;
+    margin-right: 12%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  #next:active {
+    opacity: 0.5;
+  }
+  
+  #pause {
+    display: none;
+    float: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  #pause:active {
+    opacity: 0.5;
+  }
+  
+  #thoughts {
+    margin-left: 2em;
+    text-align: left;
+    margin-bottom: -5px;
+  }
+  
+  #album_background {
+    padding: 10px;
+    max-height: 300px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  
+  #mobile_album {
+    display: none;
+  }
+  
+  #mobile_message {
+    display: none;
+  }
+
 .label_playing {
   display: none;
 }
@@ -17,6 +169,10 @@ body {
 
 .track_text:hover {
   opacity: 0.7;
+}
+
+#mobile_album {
+  display: none;
 }
 
 #stop {
@@ -129,4 +285,6 @@ body {
     -webkit-animation-iteration-count:  infinite;
     -webkit-animation-timing-function: linear;
     -webkit-animation-fill-mode: forwards;
+}
+
 }

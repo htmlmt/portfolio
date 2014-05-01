@@ -1,5 +1,26 @@
 $(document).ready(function(){
   
+  var isMobile = {
+      Android: function() {
+          return navigator.userAgent.match(/Android/i);
+      },
+      BlackBerry: function() {
+          return navigator.userAgent.match(/BlackBerry/i);
+      },
+      iOS: function() {
+          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+      },
+      Opera: function() {
+          return navigator.userAgent.match(/Opera Mini/i);
+      },
+      Windows: function() {
+          return navigator.userAgent.match(/IEMobile/i);
+      },
+      any: function() {
+          return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+      }
+  };
+  
   function getAngle(){
     var el = document.getElementById("main_target");
     var st = window.getComputedStyle(el, null);
@@ -39,10 +60,371 @@ $(document).ready(function(){
   var needleBack = $("#needle_back")[0]
   var coffeePour = $("#coffee_pour")[0]
   
+  $("#play").click(function(){
+    if ( $(".track_one_list").hasClass("playing_now") ) {
+      trackOne.play();
+    } else if ( $(".track_two_list").hasClass("playing_now") ) {
+      trackTwo.play();
+    } else if ( $(".track_three_list").hasClass("playing_now") ) {
+      trackThree.play();
+    } else if ( $(".track_four_list").hasClass("playing_now") ) {
+      trackFour.play();
+    } else if ( $(".track_five_list").hasClass("playing_now") ) {
+      trackFive.play();
+    } else if ( $(".track_six_list").hasClass("playing_now") ) {
+      trackSix.play();
+    } else if ( $(".track_seven_list").hasClass("playing_now") ) {
+      trackSeven.play();
+    }  else {
+      trackOne.play();
+    }
+    $("#play").hide();
+    $("#pause").show();
+  })
+  
+  $("#next").on("click", function(){
+    if ( $(".track_one_list").hasClass("playing_now") ) {
+      console.log("1")
+      trackOne.pause();
+      trackOne.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_two_list").addClass("playing_now");
+      trackTwo.play();
+    } else if ( $(".track_two_list").hasClass("playing_now") ) {
+      trackTwo.pause();
+      trackTwo.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_three_list").addClass("playing_now");
+      trackThree.play();
+    } else if ( $(".track_three_list").hasClass("playing_now") ) {
+      trackThree.pause();
+      trackThree.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_four_list").addClass("playing_now");
+      trackFour.play();
+    } else if ( $(".track_four_list").hasClass("playing_now") ) {
+      trackFour.pause();
+      trackFour.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_five_list").addClass("playing_now");
+      trackFive.play();
+    } else if ( $(".track_five_list").hasClass("playing_now") ) {
+      trackFive.pause();
+      trackFive.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_six_list").addClass("playing_now");
+      trackSix.play();
+    } else if ( $(".track_six_list").hasClass("playing_now") ) {
+      trackSix.pause();
+      trackSix.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_seven_list").addClass("playing_now");
+      trackSeven.play();
+    } else if ( $(".track_seven_list").hasClass("playing_now") ) {
+      trackSeven.pause();
+      trackSeven.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_one_list").addClass("playing_now");
+      trackOne.play();
+    }  else {
+      
+    }
+    $("#play").hide();
+    $("#pause").show();
+  })
+  
+  $("#prev").on("click", function(){
+    if ( $(".track_one_list").hasClass("playing_now") ) {
+      trackOne.pause();
+      trackOne.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_seven_list").addClass("playing_now");
+      trackSeven.play();
+    } else if ( $(".track_two_list").hasClass("playing_now") ) {
+      trackTwo.pause();
+      trackTwo.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_one_list").addClass("playing_now");
+      trackOne.play();
+    } else if ( $(".track_three_list").hasClass("playing_now") ) {
+      trackThree.pause();
+      trackThree.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_two_list").addClass("playing_now");
+      trackTwo.play();
+    } else if ( $(".track_four_list").hasClass("playing_now") ) {
+      trackFour.pause();
+      trackFour.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_three_list").addClass("playing_now");
+      trackThree.play();
+    } else if ( $(".track_five_list").hasClass("playing_now") ) {
+      trackFive.pause();
+      trackFive.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_four_list").addClass("playing_now");
+      trackFour.play();
+    } else if ( $(".track_six_list").hasClass("playing_now") ) {
+      trackSix.pause();
+      trackSix.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_five_list").addClass("playing_now");
+      trackFive.play();
+    } else if ( $(".track_seven_list").hasClass("playing_now") ) {
+      trackSeven.pause();
+      trackSeven.currentTime = 0
+      $(".track_list").removeClass("playing_now");
+      $(".track_six_list").addClass("playing_now");
+      trackSix.play();
+    }  else {
+      
+    }
+    $("#play").hide();
+    $("#pause").show();
+  });
+  
+  $("#pause").on("click", function(){
+    trackFour.pause();
+    trackTwo.pause();
+    trackThree.pause();
+    trackFive.pause();
+    trackSix.pause();
+    trackSeven.pause();
+    trackOne.pause();
+    $("#pause").hide();
+    $("#play").show();
+  });
+  
+  $(".track_one_list").on("click", function(){
+    $(".track_list").removeClass("playing_now");
+    trackFour.pause();
+    trackTwo.pause();
+    trackThree.pause();
+    trackFive.pause();
+    trackSix.pause();
+    trackSeven.pause();
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
+    trackOne.play();
+    $(".track_one_list").addClass("playing_now");
+    $("#play").hide();
+    $("#pause").show();
+  });
+  
+  $(".track_two_list").on("click", function(){
+    $(".track_list").removeClass("playing_now");
+    trackOne.pause();
+    trackFour.pause();
+    trackThree.pause();
+    trackFive.pause();
+    trackSix.pause();
+    trackSeven.pause();
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
+    trackTwo.play();
+    $(".track_two_list").addClass("playing_now");
+    $("#play").hide();
+    $("#pause").show();
+  })
+  
+  $(".track_three_list").on("click", function(){
+    $(".track_list").removeClass("playing_now");
+    trackOne.pause();
+    trackTwo.pause();
+    trackFour.pause();
+    trackFive.pause();
+    trackSix.pause();
+    trackSeven.pause();
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
+    trackThree.play();
+    $(".track_three_list").addClass("playing_now");
+    $("#play").hide();
+    $("#pause").show();
+  });
+  
+  $(".track_four_list").on("click", function(){
+    $(".track_list").removeClass("playing_now");
+    trackOne.pause();
+    trackTwo.pause();
+    trackThree.pause();
+    trackFive.pause();
+    trackSix.pause();
+    trackSeven.pause();
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
+    trackFour.play();
+    $(".track_four_list").addClass("playing_now");
+    $("#play").hide();
+    $("#pause").show();
+  });
+  
+  $(".track_five_list").on("click", function(){
+    $(".track_list").removeClass("playing_now");
+    trackOne.pause();
+    trackTwo.pause();
+    trackThree.pause();
+    trackFour.pause();
+    trackSix.pause();
+    trackSeven.pause();
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
+    trackFive.play();
+    $(".track_five_list").addClass("playing_now");
+    $("#play").hide();
+    $("#pause").show();
+  });
+  
+  $(".track_six_list").on("click", function(){
+    $(".track_list").removeClass("playing_now");
+    trackOne.pause();
+    trackTwo.pause();
+    trackThree.pause();
+    trackFive.pause();
+    trackFour.pause();
+    trackSeven.pause();
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
+    if ( trackSeven.currentTime ) {
+       trackSeven.currentTime = 0
+    }
+    trackSix.play();
+    $(".track_six_list").addClass("playing_now");
+    $("#play").hide();
+    $("#pause").show();
+  });
+  
+  $(".track_seven_list").on("click", function(){
+    $(".track_list").removeClass("playing_now");
+    trackOne.pause();
+    trackTwo.pause();
+    trackThree.pause();
+    trackFive.pause();
+    trackSix.pause();
+    trackFour.pause();
+    if ( trackOne.currentTime ) {
+       trackOne.currentTime = 0
+    }
+    if ( trackTwo.currentTime ) {
+       trackTwo.currentTime = 0
+    }
+    if ( trackThree.currentTime ) {
+       trackThree.currentTime = 0
+    }
+    if ( trackFive.currentTime ) {
+       trackFive.currentTime = 0
+    }
+    if ( trackSix.currentTime ) {
+       trackSix.currentTime = 0
+    }
+    if ( trackFour.currentTime ) {
+       trackFour.currentTime = 0
+    }
+    trackSeven.play();
+    $(".track_seven_list").addClass("playing_now");
+    $("#play").hide();
+    $("#pause").show();
+  });
+  
   setTimeout(function(){
     $("#record_label").addClass("record_spin")}, 2500);
   
-  coffeePour.play();
+  if ( !isMobile.any() === false ){
+    coffeePour.play();
+  }
   
   $("#coffee_cup").css("fill", "#CCCCCC");
   setTimeout(function(){
