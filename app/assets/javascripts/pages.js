@@ -1,26 +1,5 @@
 $(document).ready(function(){
   
-  var isMobile = {
-      Android: function() {
-          return navigator.userAgent.match(/Android/i);
-      },
-      BlackBerry: function() {
-          return navigator.userAgent.match(/BlackBerry/i);
-      },
-      iOS: function() {
-          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-      },
-      Opera: function() {
-          return navigator.userAgent.match(/Opera Mini/i);
-      },
-      Windows: function() {
-          return navigator.userAgent.match(/IEMobile/i);
-      },
-      any: function() {
-          return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-      }
-  };
-  
   function getAngle(){
     var el = document.getElementById("main_target");
     var st = window.getComputedStyle(el, null);
@@ -472,7 +451,7 @@ $(document).ready(function(){
   setTimeout(function(){
     $("#record_label").addClass("record_spin")}, 2500);
   
-  if ( !isMobile.any() === false ){
+  if ( $("#container").is(":visible")  ){
     coffeePour.play();
   }
   
