@@ -146,6 +146,9 @@ body {
 }
 
 @media all and (min-width: 768px) {
+  #audio_buttons {
+    display: none;
+  }
   
   #mobile_album {
     display: none;
